@@ -84,7 +84,7 @@ function listarPorCategoria(categoriaDesejada) {
     console.log(catalogoProdutos.filter(produto => produto.categoria === categoriaDesejada));
 }
 
-listarPorCategoria('Acessórios')
+// listarPorCategoria('Acessórios')
 
 //2º Questão
 
@@ -103,4 +103,22 @@ function encontrarPorId(idDesejado) {
     }
 }
 
-encontrarPorId(10)
+// encontrarPorId(10)
+
+//3º Questão
+
+function listarProdutosEmEstoque() {
+    let novoArray = []
+    const listaProdutos = catalogoProdutos.filter(produtos => produtos.emEstoque === true).map((item) => ({
+
+        return: `${item.nome} - R$${item.preco.toFixed(2)}`
+
+    }))
+
+    novoArray.push(...listaProdutos.map(teste => teste.return))
+
+    console.log(novoArray);
+}
+
+
+listarProdutosEmEstoque()
