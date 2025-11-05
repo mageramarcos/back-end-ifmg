@@ -77,8 +77,30 @@ const catalogoProdutos = [{
     }
 ];
 
+
+//1º Questão
+
 function listarPorCategoria(categoriaDesejada) {
     console.log(catalogoProdutos.filter(produto => produto.categoria === categoriaDesejada));
 }
 
 listarPorCategoria('Acessórios')
+
+//2º Questão
+
+function encontrarPorId(idDesejado) {
+    try {
+        const buscar = catalogoProdutos.find((produtoId) => produtoId.id === Number(idDesejado))
+
+        if (!buscar) {
+            throw new Error("Erro: Produto não encontrado");
+        }
+        console.log(buscar);
+
+
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
+encontrarPorId(10)
