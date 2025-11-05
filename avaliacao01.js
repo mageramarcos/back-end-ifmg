@@ -121,4 +121,18 @@ function listarProdutosEmEstoque() {
 }
 
 
-listarProdutosEmEstoque()
+// listarProdutosEmEstoque()
+
+//4º Questão
+
+function calcularValorEstoquePorCategoria(categoriaDesejada) {
+    const produto = catalogoProdutos.filter(produto => produto.categoria === categoriaDesejada && produto.emEstoque === true)
+
+    const total = produto.reduce((soma, item) => soma + item.preco, 0)
+
+    console.log(`O valor total em estoque da categoria '${categoriaDesejada}' é de R$${total.toFixed(2)}`);
+
+}
+
+
+calcularValorEstoquePorCategoria("Acessórios")
