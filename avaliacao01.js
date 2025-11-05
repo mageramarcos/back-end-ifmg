@@ -76,4 +76,9 @@ const catalogoProdutos = [{
         emEstoque: true
     }
 ];
-//troca de email
+
+function listarPorCategoria(categoriaDesejada) {
+    console.log(catalogoProdutos.filter(produto => produto.categoria === categoriaDesejada));
+}
+
+listarPorCategoria('Acessórios')
